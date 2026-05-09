@@ -30,8 +30,8 @@
       <option value="Travel">Travel</option>
     </select>
 
-    <p v-if="pending">Loading...</p>
-    <p v-else-if="error && posts.length === 0">Failed to load posts</p>
+    <p v-if="pending">Loading posts...</p>
+    <p v-else-if="error && posts.length === 0">Unable to fetch posts.</p>
 
     <div v-for="post in posts" :key="post.id" class="post-card">
 
