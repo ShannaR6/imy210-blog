@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  strapi:
+    build: ./blog-backend
+    container_name: strapi
+    ports:
+      - "1337:1337"
+    env_file:
+      - ./blog-backend/.env
+
+  nuxt:
+    build: ./blog-frontend
+    container_name: nuxt
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./blog-frontend/.env
+    depends_on:
+      - strapi
