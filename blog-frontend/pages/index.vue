@@ -31,6 +31,7 @@
     </select>
 
     <p v-if="pending">Loading posts...</p>
+    <p v-else-if="!pending && posts.length === 0">No posts found for this category.</p>
     <p v-else-if="error && posts.length === 0">Unable to fetch posts.</p>
 
     <div v-for="post in posts" :key="post.id" class="post-card">
