@@ -159,3 +159,8 @@ p {
 .category-select {
   width: 160px;
 }
+
+.router-link-active {
+  color: #60a5fa;
+  font-weight: bold;
+}
