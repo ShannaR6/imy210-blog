@@ -15,8 +15,7 @@
     })
 
     const posts = computed(() => data.value?.data ?? [])
-
-    console.log("STRAPI URL:", config.public.strapiUrl)
+    
 </script>
 
 <template>
